@@ -2,20 +2,6 @@ var express = require("express");
 var Customer = require("../models/customer");
 var router = express.Router();
 
-// Customer.create({
-// 	fname:"stephen",
-// 	lname: "stee",
-// 	dob: "12051999",
-// 	phone: "9999999",
-// 	address: "ahjbjahdbfjahbfd",
-// 	favbike: "ktm"
-// },function(err, customer){
-// 	if(err){
-// 		console.log(err);
-// 	}else{
-// 		console.log(customer);
-// 	}
-// })
 
 
 router.get("/user",function(req,res){
@@ -45,16 +31,6 @@ router.post("/user",function(req,res){
 		  res.redirect("/index");
 	  }
   })
-})
-
-router.get("/user/:id",function(req,res){
-	Customer.findById(req.params.id,function(err,customer){
-		if(err){
-			console.log(err);
-		}else{
-			res.render("usershow", {customer:customer});
-		}
-	})
 })
 
 module.exports = router;
