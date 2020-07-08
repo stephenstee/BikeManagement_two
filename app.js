@@ -15,8 +15,8 @@ var flash = require("connect-flash");
 
 var app = express()
 
-// mongoose.connect("mongodb://localhost/bike_project",{useNewUrlParser:true, useUnifiedTopology:true});
-mongoose.connect("mongodb+srv://vishwa:vishwaraina26@cluster0-ef9tg.mongodb.net/vishwa?retryWrites=true&w=majority",{useNewUrlParser:true, useUnifiedTopology:true});
+mongoose.connect("mongodb://localhost/bike_project",{useNewUrlParser:true, useUnifiedTopology:true});
+// mongoose.connect("mongodb+srv://vishwa:vishwaraina26@cluster0-ef9tg.mongodb.net/vishwa?retryWrites=true&w=majority",{useNewUrlParser:true, useUnifiedTopology:true});
 
 app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended:true}));
